@@ -72,7 +72,10 @@ void    ft_add_life(char matrix[10][11])
     matrix[4][2] = 'o';
     matrix[4][1] = 'o';
     matrix[3][0] = 'o';
-//    matrix[3][4] = 'o';
+
+    matrix[6][6] = 'o';
+    matrix[7][6] = 'o';
+    matrix[8][6] = 'o';
 }
 
 int    ft_count_live(int x, int y, char matrix[10][11])
@@ -178,18 +181,18 @@ int     main(void)
     system("clear");
     ft_matrix(matrix);
     ft_putchar('\n');
-    sleep(1);
+    usleep(100000);
     system("clear");
     ft_add_life(matrix);
     while (a = 1)
     {
         ft_print_matrix(matrix);
         ft_putchar('\n');
-        sleep(1);
+        usleep(100000);
         system("clear");
         ft_rules(matrix);
         ft_print_matrix(matrix);
-        sleep(1);
+        usleep(100000);
         system("clear");
     }
     
